@@ -63,6 +63,7 @@ stored in a config file of the Celluloid/Reel application for now.
 
 ### Functionally
 
+* HTTP server will run on a Raspberry Pi and start at boot time.
 * Demonstrate https.
 * Unauthorized access will be redirected to a login page. A cookie will store authorization.
 * Demonstrate a websocket that updates with server time.
