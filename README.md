@@ -46,3 +46,22 @@ day. It’s powerful enough to run a fast webserver, a websocket server,
 perhaps a database to log your data, and host your wireless Moteino
 gateway, or whatever else you might interface to your IoT stuff. I want
 ONE central Rpi, not a dozen.
+
+## My Approach
+
+### Use Celluloid/Reel for the HTTP server.
+
+* Reel supports https.
+* Reel supports websockets.
+
+For authorization, I plan to manage an authorization cookie
+in the browser withJavaScript.  Login/password pairs will be
+stored in a config file of the Celluloid/Reel application for now.
+
+### Functionally
+
+* Demonstrate https.
+* Unauthorized access will be redirected to a login page. A cookie will store authorization.
+* Demonstrate a websocket that updates with server time.
+
+
