@@ -49,7 +49,10 @@ ONE central Rpi, not a dozen.
 
 ## My Approach
 
-### Use Celluloid/Reel for the HTTP server.
+This first demonstration will run on a Raspberry Pi,
+but will have no hardware specific components.
+
+### Use Jruby/Celluloid/Reel for the HTTP server.
 
 * Reel supports https.
 * Reel supports websockets.
