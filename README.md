@@ -25,15 +25,23 @@ His diagram
 
 Ok so let’s get the 10,000 ft picture…
 
-__Authorization.__ We need to only allow authorized access to the home
+### Authorization.
+
+We need to only allow authorized access to the home
 gateway. So whoever hits the gateway needs to provide authorization tokens
 
-__Encryption.__ We need HTTPS, period.
+### Encryption.
 
-__Realtime.__ To have any kind of real time feel interacting with your home
+We need HTTPS, period.
+
+### Realtime.
+
+To have any kind of real time feel interacting with your home
 automation gateway, you will need __websockets.__
 
-__RaspberryPi powered.__ It’s because Rpi is the other cool thing of the
+### RaspberryPi powered.
+
+It’s because Rpi is the other cool thing of the
 day. It’s powerful enough to run a fast webserver, a websocket server,
 perhaps a database to log your data, and host your wireless Moteino
 gateway, or whatever else you might interface to your IoT stuff. I want
