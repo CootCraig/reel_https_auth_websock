@@ -1,5 +1,6 @@
 require 'log4r'
 require 'reel'
+require 'socket'
 
 module ReelHttpsAuthWebsock
   class HttpServer
@@ -30,7 +31,7 @@ module ReelHttpsAuthWebsock
         connection.each_request do |request|
           # Ordinarily we'd route the request here, e.g.
           # route request.url
-          request.respond :ok, "hello, world!"
+          request.respond :ok, "hello, world! From #{Socket.gethostname}"
         end
 
         # Reel takes care of closing the connection for you

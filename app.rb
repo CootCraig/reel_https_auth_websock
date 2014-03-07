@@ -97,6 +97,7 @@ module ReelHttpsAuthWebsock
     def self.run
       init
       @@http_server = HttpServer.new(@@config[:http_host],@@config[:http_port],@@tls_certificate,@@tls_key)
+      puts "https started"
       sleep
     end
 
