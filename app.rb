@@ -6,6 +6,7 @@ require 'log4r'
 require 'log4r/yamlconfigurator'
 require 'nesty'
 
+require_relative './http_server'
 require_relative './version'
 
 module ReelHttpsAuthWebsock
@@ -21,14 +22,11 @@ module ReelHttpsAuthWebsock
     @@yaml_config = nil
     @@app_config_file = nil
     @@config = nil
+    @@http_server = nil
     @@logger = nil
     @@script_folder_pathname = nil
     @@tls_certificate = nil
     @@tls_key = nil
-
-    def self.run
-      init
-    end
 
     # Return the application config hash.
     # :http_host::   Interface used for HTTP
@@ -36,6 +34,10 @@ module ReelHttpsAuthWebsock
     # @return [hash] the application config.
     def self.config
       @@config
+    end
+
+    def self.http_server
+      @@http_server
     end
 
     # @!visibility private
@@ -91,6 +93,13 @@ module ReelHttpsAuthWebsock
     def self.script_folder_pathname
       @@script_folder_pathname
     end
+
+    def self.run
+      init
+      @@http_server = HttpServer.new(@@config[:http_host],@@config[:http_port],@@tls_certificate,@@tls_key)
+      sleep
+    end
+
   end
 end
 
