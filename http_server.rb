@@ -1,6 +1,7 @@
 require 'log4r'
 require 'reel'
-require 'socket'
+
+require_relative './http_request_router'
 
 module ReelHttpsAuthWebsock
   class HttpServer
@@ -29,9 +30,10 @@ module ReelHttpsAuthWebsock
       @supervisor = Reel::Server::HTTPS.supervise(@host, @port, options) do |connection|
         # For keep-alive support
         connection.each_request do |request|
-          # Ordinarily we'd route the request here, e.g.
-          # route request.url
-          request.respond :ok, "hello, world! From #{Socket.gethostname}"
+          if request.websocket?
+          else
+            HttpRequestRouter.instance.request_page(request)
+          end
         end
 
         # Reel takes care of closing the connection for you
