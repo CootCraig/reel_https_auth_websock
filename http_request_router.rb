@@ -2,6 +2,7 @@ require 'pathname'
 require 'haml'
 
 require_relative './request_html'
+require_relative './request_js'
 
 module ReelHttpsAuthWebsock
   class HttpRequestRouter
@@ -15,7 +16,7 @@ module ReelHttpsAuthWebsock
       @logger.debug "path #{request.path}"
       case request.path
       when %r|js$|
-        request.respond :ok, "javascript path #{request.path}"
+        RequestJs.instance.request_js(request)
       when %r{/|html$}
         RequestHtml.instance.request_page(request)
       when %r|css$|

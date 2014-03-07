@@ -31,6 +31,12 @@ module ReelHttpsAuthWebsock
         # For keep-alive support
         connection.each_request do |request|
           if request.websocket?
+            @logger.debug "received a websocket request"
+            begin
+              Celluloid::Actor[:time_server].async.add_websocket(request.websocket)
+            rescue => ex
+              @logger.error "add_websocket #{ex.to_s}\n#{ex.backtrace}"
+            end
           else
             HttpRequestRouter.instance.request_page(request)
           end

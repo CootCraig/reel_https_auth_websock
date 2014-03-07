@@ -7,6 +7,7 @@ require 'log4r/yamlconfigurator'
 require 'nesty'
 
 require_relative './http_server'
+require_relative './time_server'
 require_relative './version'
 
 module ReelHttpsAuthWebsock
@@ -96,7 +97,10 @@ module ReelHttpsAuthWebsock
 
     def self.run
       init
+      TimeServer.supervise_as(:time_server)
+      @@logger.info "TimeServer started"
       @@http_server = HttpServer.new(@@config[:http_host],@@config[:http_port],@@tls_certificate,@@tls_key)
+      @@logger.info "HttpServer started"
       puts "https started"
       sleep
     end
