@@ -17,6 +17,7 @@ GEM
       bouncy-castle-java (>= 1.5.0147)
     json (1.8.1-java)
     log4r (1.1.10)
+    nesty (1.0.2)
     nio4r (1.0.0-java)
     reel (0.4.0)
       celluloid (>= 0.15.1)
@@ -38,5 +39,6 @@ DEPENDENCIES
   jruby-openssl
   json
   log4r
+  nesty
   reel
   yard

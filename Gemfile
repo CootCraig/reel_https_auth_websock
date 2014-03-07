@@ -6,4 +6,5 @@ gem 'jruby-openssl'
 gem "htmlentities"
 gem "json"
 gem "haml"
+gem 'nesty'
 

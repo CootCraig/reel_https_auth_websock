@@ -1,8 +1,89 @@
 ==================
 
+================== bundle install on pika (Raspberry Pi)
+Thu Mar  6 15:34:52 MST 2014
+
+bundle install on pika worked with this Gemfile list:
+
+gem "reel"
+gem "log4r"
+gem 'yard'
+gem 'jruby-openssl'
+gem "htmlentities"
+gem "json"
+gem "haml"
+
+------------ Gemfile.lock on pika
+GEM
+  remote: http://rubygems.org/
+  specs:
+    bouncy-castle-java (1.5.0147)
+    celluloid (0.15.2)
+      timers (~> 1.1.0)
+    celluloid-io (0.15.0)
+      celluloid (>= 0.15.0)
+      nio4r (>= 0.5.0)
+    haml (4.0.5)
+      tilt
+    htmlentities (4.3.1)
+    http (0.5.0)
+      http_parser.rb
+    http_parser.rb (0.6.0-java)
+    jruby-openssl (0.9.4)
+      bouncy-castle-java (>= 1.5.0147)
+    json (1.8.1-java)
+    log4r (1.1.10)
+    nio4r (1.0.0-java)
+    reel (0.4.0)
+      celluloid (>= 0.15.1)
+      celluloid-io (>= 0.15.0)
+      http (>= 0.5.0)
+      http_parser.rb (>= 0.6.0.beta.2)
+      websocket_parser (>= 0.1.4)
+    tilt (2.0.0)
+    timers (1.1.0)
+    websocket_parser (0.1.6)
+    yard (0.8.7.3)
+
+================== tls cert, tls key
+https://github.com/celluloid/reel/blob/master/lib/reel/server/https.rb
+
+options are
+# @option options [String] :cert the server's TLS certificate
+# @option options [String] :key  the server's TLS key
+
 ==================
-==================
-==================
+http://wiki.centos.org/HowTos/Https
+
+. Generate a self-signed certificate
+
+Using OpenSSL we will generate a self-signed certificate. If you are
+using this on a production server you are probably likely to want a key
+from a Trusted Certificate Authority, but if you are just using this on
+a personal site or for testing purposes a self-signed certificate is
+fine. To create the key you will need to be root so you can either su
+to root or use sudo in front of the commands
+
+
+# Generate private key 
+openssl genrsa -out ca.key 2048 
+
+# Generate CSR 
+openssl req -new -key ca.key -out ca.csr
+
+# Generate Self Signed Key
+openssl x509 -req -days 365 -in ca.csr -signkey ca.key -out ca.crt
+
+# Copy the files to the correct locations
+cp ca.crt /etc/pki/tls/certs
+cp ca.key /etc/pki/tls/private/ca.key
+cp ca.csr /etc/pki/tls/private/ca.csr
+
+WARNING: Make sure that you copy the files and do not move them if you use
+SELinux. Apache will complain about missing certificate files otherwise,
+as it cannot read them because the certificate files do not have the
+right SELinux context.
+
 ==================
 ==================
 ==================
