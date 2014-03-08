@@ -2,6 +2,7 @@ require 'log4r'
 require 'reel'
 
 require_relative './http_request_router'
+require_relative './request_html'
 
 module ReelHttpsAuthWebsock
   class HttpServer
@@ -31,11 +32,28 @@ module ReelHttpsAuthWebsock
         # For keep-alive support
         connection.each_request do |request|
           if request.websocket?
-            @logger.debug "received a websocket request"
-            begin
-              Celluloid::Actor[:time_server].async.add_websocket(request.websocket)
-            rescue => ex
-              @logger.error "add_websocket #{ex.to_s}\n#{ex.backtrace}"
+            authenticated = false
+            if request.headers['Cookie']
+              cookie = request.headers['Cookie']
+            else
+              cookie = 'not seen'
+            end
+            if RequestHtml.instance.authenticated_cookie?(request)
+              authenticated = true
+              @logger.debug "received a websocket request path #{request.path} authenticated cookie #{cookie}"
+            else
+              authenticated = false
+              @logger.debug "received a websocket request path #{request.path} NOT authenticated cookie #{cookie}"
+            end
+            @logger.debug "received a websocket request path #{request.path} cookie #{cookie}"
+            if authenticated
+              begin
+                Celluloid::Actor[:time_server].async.add_websocket(request.websocket)
+              rescue => ex
+                @logger.error "add_websocket #{ex.to_s}\n#{ex.backtrace}"
+              end
+            else
+              request.websocket.close
             end
           else
             HttpRequestRouter.instance.request_page(request)

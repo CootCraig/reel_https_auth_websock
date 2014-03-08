@@ -11,7 +11,7 @@ module ReelHttpsAuthWebsock
       every(2) { publish }
     end
     def add_websocket(websocket)
-      @websocket_clients[websocket.object_id] = websocket
+      @websocket_clients[websocket.object_id] = websocket unless @websocket_clients[websocket.object_id]
     end
     def publish
       @websocket_clients.each_pair do |key,websocket|

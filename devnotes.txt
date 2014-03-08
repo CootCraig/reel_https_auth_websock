@@ -85,8 +85,16 @@ as it cannot read them because the certificate files do not have the
 right SELinux context.
 
 ==================
+https://github.com/dcompute/Zepto-Cookie
+
 ==================
+http://www.peej.co.uk/articles/http-auth-with-html-forms.html
+http://theninjabag.net/blog//blog/2013/06/25/dtob-dot-py-digest-to-basic-authentication-a-simple-example-of-a-authentication-downgrade-attack/
+http://swaggadocio.com/post/48223179207/why-the-hell-does-your-api-still-use-http-basic-auth
 ==================
+http://user:password@example.com 
+http://user:passwd@www.server.com/index.html
+https://github.com/sparklemotion/http-cookie
 ==================
 ==================
 ==================
@@ -200,3 +208,7 @@ right SELinux context.
 ==================
 ==================
 ==================
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     8625  8568  0 10975   320   0 Mar06 pts/5    00:00:01 ssh 192.168.88.218
+craig    15105  7803  0 320286 206628 0 Mar07 pts/0    00:01:52 /opt/java/jre/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/ruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/ruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djruby.home=/opt/ruby/jruby-1.7.11 -Djruby.lib=/opt/ruby/jruby-1.7.11/lib -Djruby.script=jruby -Djruby.shell=/bin/sh org.jruby.Main app.rb
+craig    15540 10736  0  4612  1312   0 07:37 pts/6    00:00:00 ps -aF

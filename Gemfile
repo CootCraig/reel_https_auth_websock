@@ -10,4 +10,5 @@ gem "htmlentities"
 gem "json"
 gem "haml"
 gem 'nesty'
+gem 'http-cookie'
 

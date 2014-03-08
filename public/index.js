@@ -8,5 +8,5 @@ Zepto(function($){
   server_time_socket.onmessage = function (event) {
     $('#current_time').html(event.data);
   };
-})
+});
 

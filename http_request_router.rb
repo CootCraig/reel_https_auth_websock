@@ -15,12 +15,14 @@ module ReelHttpsAuthWebsock
     def request_page(request)
       @logger.debug "path #{request.path}"
       case request.path
-      when %r|js$|
+      when %r{js$}
         RequestJs.instance.request_js(request)
-      when %r{/|html$}
+      when %r{^/$|html$}
         RequestHtml.instance.request_page(request)
-      when %r|css$|
+      when %r{css$}
         request.respond :ok, "css path #{request.path}"
+      when '/debug'
+        request.respond :ok, "/debug uri #{request.uri} headers #{request.headers}"
       else
         request.respond :not_found, "Not Found in request router path #{request.path}"
       end
