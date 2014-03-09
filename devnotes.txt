@@ -96,6 +96,100 @@ http://user:password@example.com
 http://user:passwd@www.server.com/index.html
 https://github.com/sparklemotion/http-cookie
 ==================
+ran for 10h 10m
+SZ
+164524 - 164916 
+RSS
+114668 - 171200
+
+# 
+08:15:23
+18:27
+
+RSS	Real memory usage
+SZ	Virtual memory usage
+
+
+base::App INFO 2014-03-08 08:15:23 :: Log4r and application configured from file /opt/coot.net/reel_https_auth_websock/app.yml
+base::App INFO 2014-03-08 08:15:23 :: http_host 0.0.0.0 http_port 4430  
+
+Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent
+permitted by applicable law.
+Last login: Thu Mar  6 15:16:04 2014 from 192.168.88.252
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740 28 164524 114668 0 08:12 pts/0    00:03:37 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4503  4498  0  1104  1116   0 08:25 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740 26 164780 116752 0 08:12 pts/0    00:03:41 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4504  4498  0  1104  1116   0 08:26 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740 20 164813 117376 0 08:12 pts/0    00:03:51 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4511  4498  0  1104  1116   0 08:31 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740 12 164813 118104 0 08:12 pts/0    00:04:20 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4518  4498  0  1104  1116   0 08:48 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740 10 164813 118104 0 08:12 pts/0    00:04:33 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4526  4498  0  1104  1116   0 08:56 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740  8 164813 118112 0 08:12 pts/0    00:05:02 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4537  4498  0  1104  1116   0 09:12 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740  7 164813 121580 0 08:12 pts/0    00:05:22 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4551  4498  0  1104  1116   0 09:24 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740  6 164813 121584 0 08:12 pts/0    00:05:37 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4563  4498  0  1104  1116   0 09:44 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740  5 164813 128236 0 08:12 pts/0    00:06:05 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4583  4498  0  1104  1116   0 10:14 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740  3 164813 138416 0 08:12 pts/0    00:06:37 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4623  4498  0  1104  1116   0 11:12 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740  3 164813 138424 0 08:12 pts/0    00:06:43 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4641  4498  0  1104  1116   0 11:27 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740  2 164846 159392 0 08:12 pts/0    00:07:21 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4697  4498  0  1104  1116   0 12:53 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740  2 164846 159392 0 08:12 pts/0    00:07:34 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4721  4498  0  1104  1116   0 13:25 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740  2 164916 169120 0 08:12 pts/0    00:08:16 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4778  4498  0  1104  1116   0 14:55 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740  1 164916 169120 0 08:12 pts/0    00:08:39 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4837  4498  0  1104  1116   0 15:49 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740  1 164916 169124 0 08:12 pts/0    00:08:50 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4851  4498  0  1104  1116   0 16:16 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740  1 164916 169124 0 08:12 pts/0    00:08:55 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4866  4498  0  1104  1116   0 16:26 pts/1    00:00:00 ps -aF
+craig@pika:~$ ps -aF
+UID        PID  PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+craig     4446  1740  1 164916 171200 0 08:12 pts/0    00:09:50 /opt/java/jdk/bin/java -Xmx500m -Xss2048k -Djffi.boot.library.path=/opt/jruby/jruby-1.7.11/lib/jni -Xbootclasspath/a:/opt/jruby/jruby-1.7.11/lib/jruby.jar -classpath : -Djru
+craig     4947  4498  0  1104  1116   0 18:27 pts/1    00:00:00 ps -aF
+craig@pika:~$ 
+
 ==================
 ==================
 ==================
